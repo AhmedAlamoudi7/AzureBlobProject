@@ -36,9 +36,32 @@ namespace AzureBlobStorage.Web.Services
             return containerNames;
         }
 
-        public Task<List<string>> GetAllContainerAndBlobs()
+        public async Task<List<string>> GetAllContainerAndBlobs()
         {
-            throw new NotImplementedException();
+            List<string> containerAndBlobNames = new();
+            containerAndBlobNames.Add("Account Name : " + _blobServiceClient.AccountName);
+            containerAndBlobNames.Add("------------------------------------------------------------------------------------------------------------");
+            await foreach (BlobContainerItem blobContainerItem in _blobServiceClient.GetBlobContainersAsync())
+            {
+                containerAndBlobNames.Add("--" + blobContainerItem.Name);
+                BlobContainerClient _blobContainer =
+                      _blobServiceClient.GetBlobContainerClient(blobContainerItem.Name);
+                await foreach (BlobItem blobItem in _blobContainer.GetBlobsAsync())
+                {
+                    containerAndBlobNames.Add("------" + blobItem.Name);
+                    //get metadata
+                    var blobClient = _blobContainer.GetBlobClient(blobItem.Name);
+                    BlobProperties blobProperties = await blobClient.GetPropertiesAsync();
+                    string blobToAdd = blobItem.Name;
+                    if (blobProperties.Metadata.ContainsKey("title"))
+                    {
+                        blobToAdd += "(" + blobProperties.Metadata["title"] + ")";
+                    }
+                    containerAndBlobNames.Add("------" + blobToAdd);
+                }
+                containerAndBlobNames.Add("------------------------------------------------------------------------------------------------------------");
+            }
+            return containerAndBlobNames;
         }
     }
 }

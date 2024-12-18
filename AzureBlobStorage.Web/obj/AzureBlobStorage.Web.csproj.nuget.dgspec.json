@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SWORD\\Source\\Repos\\AzureBlobProject\\AzureBlobStorage.Web\\AzureBlobStorage.Web.csproj": {}
+    "C:\\Users\\SWORD\\Desktop\\.NEt Projects\\AzureBlobProject\\AzureBlobStorage.Web\\AzureBlobStorage.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SWORD\\Source\\Repos\\AzureBlobProject\\AzureBlobStorage.Web\\AzureBlobStorage.Web.csproj": {
+    "C:\\Users\\SWORD\\Desktop\\.NEt Projects\\AzureBlobProject\\AzureBlobStorage.Web\\AzureBlobStorage.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SWORD\\Source\\Repos\\AzureBlobProject\\AzureBlobStorage.Web\\AzureBlobStorage.Web.csproj",
+        "projectUniqueName": "C:\\Users\\SWORD\\Desktop\\.NEt Projects\\AzureBlobProject\\AzureBlobStorage.Web\\AzureBlobStorage.Web.csproj",
         "projectName": "AzureBlobStorage.Web",
-        "projectPath": "C:\\Users\\SWORD\\Source\\Repos\\AzureBlobProject\\AzureBlobStorage.Web\\AzureBlobStorage.Web.csproj",
+        "projectPath": "C:\\Users\\SWORD\\Desktop\\.NEt Projects\\AzureBlobProject\\AzureBlobStorage.Web\\AzureBlobStorage.Web.csproj",
         "packagesPath": "C:\\Users\\SWORD\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SWORD\\Source\\Repos\\AzureBlobProject\\AzureBlobStorage.Web\\obj\\",
+        "outputPath": "C:\\Users\\SWORD\\Desktop\\.NEt Projects\\AzureBlobProject\\AzureBlobStorage.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
